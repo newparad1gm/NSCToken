@@ -38,7 +38,7 @@ contract('NSCToken', function(accounts) {
 
     it("should show the transfer event", function() {
         var token;
-        return Token.deployed().then(function(instance){
+        return NSCToken.deployed().then(function(instance){
             token = instance;
             return token.transfer(accounts[1], 100000);
         }).then(function(result){
